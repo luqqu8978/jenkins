@@ -29,7 +29,7 @@ pipeline{
             }
             steps{
                 sh 'zip -r JenkinsTest.zip ../JenkinsTest/'
-                sh 'cp JenkinsTest.zip /home/asifshahapurkar/Videos/JenkinTest/jenkins'
+                sh 'cp JenkinsTest.zip /home/asifshahapurkar/Videos/JenkinTest/jenkins/'
             }
         }
 
