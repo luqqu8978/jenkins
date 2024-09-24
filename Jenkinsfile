@@ -30,5 +30,17 @@ pipeline{
                 sh 'npm start'
             }
         }
+
+        stage('zip the project'){
+            input{
+                message 'do you really want to deploy?'
+                ok "click on ok"
+                submitter 'Asif'
+            }
+            steps{
+                sh 'zip -r JenkinsTest.zip JenkinsTest/'
+                sh 'cp JenkinsTest.zip /home/asifshahapurkar/Videos/JenkinTest/jenkins'
+            }
+        }
     }
 }
