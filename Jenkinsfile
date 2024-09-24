@@ -28,11 +28,11 @@ pipeline{
                 submitter 'Asif'
             }
             steps{
-                sh 'zip -r JenkinsTest.zip JenkinsTest/'
+                sh 'zip -r JenkinsTest.zip ../JenkinsTest/'
                 sh 'cp JenkinsTest.zip /home/asifshahapurkar/Videos/JenkinTest/jenkins'
             }
         }
-        
+
         stage('Start the application'){
             input{
                 message 'do you really want to start?'
