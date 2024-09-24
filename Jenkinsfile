@@ -20,16 +20,6 @@ pipeline{
                 sh 'npm test'
             }
         }
-        stage('Start the application'){
-            input{
-                message 'do you really want to start?'
-                ok "click on ok"
-                submitter 'Asif'
-            }
-            steps{
-                sh 'npm start'
-            }
-        }
 
         stage('zip the project'){
             input{
@@ -42,5 +32,18 @@ pipeline{
                 sh 'cp JenkinsTest.zip /home/asifshahapurkar/Videos/JenkinTest/jenkins'
             }
         }
+        
+        stage('Start the application'){
+            input{
+                message 'do you really want to start?'
+                ok "click on ok"
+                submitter 'Asif'
+            }
+            steps{
+                sh 'npm start'
+            }
+        }
+
+        
     }
 }
